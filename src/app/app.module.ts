@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {
   RouterModule
 } from '@angular/router';
+import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';

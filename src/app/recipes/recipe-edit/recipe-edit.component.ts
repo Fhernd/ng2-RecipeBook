@@ -106,6 +106,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     let recipeIngredients: FormArray = new FormArray([]);
 
     if (!this.isNew){
+      if(this.recipe.hasOwnProperty('ingredientes')){
       for(let i = 0; i < this.recipe.ingredients.length; ++i){
         recipeIngredients.push(
           new FormGroup({
@@ -116,6 +117,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
             ])
           })
         );
+      }
       }
 
       recipeName = this.recipe.name;
